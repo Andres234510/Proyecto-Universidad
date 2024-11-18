@@ -46,4 +46,7 @@ public abstract class Vehiculo {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
+
+    protected abstract void aplicarDescuento(double descuento);
+
 }

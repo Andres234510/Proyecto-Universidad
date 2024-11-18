@@ -49,4 +49,10 @@ public class Cliente {
     public void setContacto(String contacto) {
         this.contacto = contacto;
     }
+
+    public String getUsuario() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getUsuario'");
+    }
+
 }

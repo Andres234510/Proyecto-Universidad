@@ -82,5 +82,7 @@ public abstract class Hibrido extends Vehiculo {
             default -> System.out.println("Modo de conducción no reconocido.");
         }
     }
+
+    protected abstract void registrarKilometraje(double kilometraje);
 }
 

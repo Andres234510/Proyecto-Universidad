@@ -82,6 +82,8 @@ public class BusElectrico extends Electrico {
         }
     }
 
+
+    @Override
     public void registrarKilometraje(double kilometros) {
         if (kilometros > 0) {
             kilometraje += kilometros;
@@ -91,6 +93,7 @@ public class BusElectrico extends Electrico {
         }
     }
 
+    @Override
     public void aplicarDescuento(double porcentaje) {
         if (porcentaje > 0 && porcentaje <= 100) {
             double descuento = (getPrecio() * porcentaje) / 100;

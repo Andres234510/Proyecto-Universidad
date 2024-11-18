@@ -89,4 +89,25 @@ public class SedanElectrico extends Electrico {
         System.out.println("Tipo de conector: " + getTipoConector());
         System.out.println("Potencia del motor: " + getPotenciaMotor() + " kW");
     }
+
+    @Override
+    public void registrarKilometraje(double kilometros) {
+        if (kilometros > 0) {
+            double kilometraje = kilometros;
+            System.out.println("Se ha registrado un recorrido de " + kilometros + " kilómetros. Kilometraje total: " + kilometraje);
+        } else {
+            System.out.println("El kilometraje ingresado no es válido.");
+        }
+    }
+
+    @Override
+    public void aplicarDescuento(double porcentaje) {
+        if (porcentaje > 0 && porcentaje <= 100) {
+            double descuento = (getPrecio() * porcentaje) / 100;
+            setPrecio(getPrecio() - descuento);
+            System.out.println("Se ha aplicado un descuento del " + porcentaje + "%. Precio actualizado: $" + getPrecio());
+        } else {
+            System.out.println("Porcentaje de descuento inválido.");
+        }
+    }
 }

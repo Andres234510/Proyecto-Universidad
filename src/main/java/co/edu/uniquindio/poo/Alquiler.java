@@ -31,4 +31,9 @@ public class Alquiler extends Transaccion {
     public void setFechaFinAlquiler(String fechaFinAlquiler) {
         this.fechaFinAlquiler = fechaFinAlquiler;
     }
+
+    public String getIdTransaccion() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getIdTransaccion'");
+    }
 }

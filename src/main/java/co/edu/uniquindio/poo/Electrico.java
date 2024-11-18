@@ -86,4 +86,6 @@ public abstract class Electrico extends Vehiculo {
         System.out.println("Tipo de conector: " + tipoConector);
         System.out.println("Potencia del motor: " + potenciaMotor + " kW");
     }
+
+    protected abstract void registrarKilometraje(double kilometraje);
 }

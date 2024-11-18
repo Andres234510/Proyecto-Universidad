@@ -68,4 +68,15 @@ public class Camion extends CombustibleAGas {
             default -> System.out.println("Modo de conducción no reconocido.");
         }
     }
+
+    @Override
+    public void aplicarDescuento(double porcentaje) {
+        if (porcentaje > 0 && porcentaje <= 100) {
+            double descuento = (getPrecio() * porcentaje) / 100;
+            setPrecio(getPrecio() - descuento);
+            System.out.println("Se ha aplicado un descuento del " + porcentaje + "%. Precio actualizado: $" + getPrecio());
+        } else {
+            System.out.println("Porcentaje de descuento inválido.");
+        }
+    }
 }
