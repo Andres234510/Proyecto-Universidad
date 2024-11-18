@@ -73,13 +73,6 @@ public abstract class Hibrido extends Vehiculo {
     @Override
     public abstract void mostrarCaracteristicas();
 
-    public double calcularAutonomia() {
-        return autonomiaTotal;
-    }
-
-    public String detallesRendimiento() {
-        return "Rendimiento combinado: " + rendimientoCombinado + " km/l";
-    }
 
     public void modoConduccion(String modo) {
         switch (modo.toLowerCase()) {
