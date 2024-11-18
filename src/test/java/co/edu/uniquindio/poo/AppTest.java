@@ -26,4 +26,9 @@ public class AppTest {
         assertTrue(true);
         LOG.info("Finalizando test shouldAnswerWithTrue");
     }
+
+    @Test
+    void testMain() {
+        
+    }
 }

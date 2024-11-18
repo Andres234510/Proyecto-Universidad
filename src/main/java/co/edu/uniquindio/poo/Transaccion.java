@@ -15,6 +15,7 @@ public abstract class Transaccion {
         this.cliente = cliente;
         this.vehiculo = vehiculo;
         this.monto = monto;
+        
     }
 
     public abstract void generarRecibo();
