@@ -51,8 +51,7 @@ public class Cliente {
     }
 
     public String getUsuario() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getUsuario'");
+        return nombre.toLowerCase() + idCliente;
     }
-
 }
+

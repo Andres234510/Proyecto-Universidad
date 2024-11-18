@@ -7,7 +7,8 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         // Inicialización de objetos
-        try (Scanner scanner = new Scanner(System.in)) {
+        try ( // Inicialización de objetos
+                Scanner scanner = new Scanner(System.in)) {
             // Inicialización de objetos
             Administrador admin = new Administrador("Juan", "Pérez", "admin123", "clave123", 1);
             Empleado empleado = new Empleado("Carlos", "López", "empleado1", "clave456", 2, "Ventas");
@@ -17,7 +18,7 @@ public class App {
             List<Vehiculo> vehiculos = new ArrayList<>();
             vehiculos.add(new SedanHibrido(40, 12, 800, 50, "Enchufable", 20, "SED123", "Toyota", "Prius", 30000, 5, 450, 6));
             vehiculos.add(new BusElectrico(150, 500, 3.5, "CCS", "BUS456", "BYD", "K9", 250000, 350, 50, TipoUso.URBANO));
-            vehiculos.add(new Deportivo(60, "Euro 6", 400, 10, TipoCombustible.Gasolina, "DEP789", "Ferrari", "Roma", 350000, 340, 2.9, "Automática"));
+            vehiculos.add(new Deportivo(60, "Euro 6", 400, 10, TipoCombustible.GASOLINA, "DEP789", "Ferrari", "Roma", 350000, 340, 2.9, "Automática"));
             
             // Registro de transacciones
             RegistroTransacciones registroTransacciones = new RegistroTransacciones();

@@ -33,7 +33,7 @@ public class Alquiler extends Transaccion {
     }
 
     public String getIdTransaccion() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getIdTransaccion'");
+        return String.valueOf(idTransaccion);
     }
 }
+

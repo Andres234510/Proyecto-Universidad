@@ -58,17 +58,15 @@ public class Empleado extends Usuario {
     }
 
     public String getNombre() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getNombre'");
+        return nombre;
     }
 
     public String getUsuario() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getUsuario'");
+        return nombreUsuario;
     }
 
     public String getCorreo() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getCorreo'");
+        return "empleado@" + nombreUsuario + ".com";
     }
 }
+

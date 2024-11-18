@@ -12,28 +12,24 @@ public class Venta extends Transaccion {
                             ", Cliente: " + cliente.getNombre() + ", Monto: $" + monto);
     }
 
-    public Administrador getCliente() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getCliente'");
+    public String getIdTransaccion() {
+        return String.valueOf(idTransaccion); // Convierte y retorna el ID de la transacción como String
     }
 
-    public Administrador getEmpleado() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getEmpleado'");
+    public Cliente getCliente() {
+        return cliente; // Retorna el cliente asociado a la venta
+    }
+
+    public Empleado getEmpleado() {
+        return empleado; // Retorna el empleado asociado a la venta
     }
 
     public Vehiculo getVehiculo() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getVehiculo'");
+        return vehiculo; // Retorna el vehículo involucrado en la venta
     }
 
     public String getPrecio() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getPrecio'");
+        return String.format("$%.2f", monto); // Retorna el monto de la venta en formato de precio
     }
 
-    public String getIdTransaccion() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getIdTransaccion'");
-    }
 }
