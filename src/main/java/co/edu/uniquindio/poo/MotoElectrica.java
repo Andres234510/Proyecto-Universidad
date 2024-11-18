@@ -1,17 +1,15 @@
 package co.edu.uniquindio.poo;
 
-public class Van extends CombustibleAGas {
+public class MotoElectrica extends Electrico {
     private int capacidadPasajeros; // Número de pasajeros que puede transportar
-    private double espacioCarga; // Espacio de carga en metros cúbicos
-    private double kilometraje; // Kilometraje total de la Van
+    private double espacioCarga; // Espacio de carga en litros
+    private double kilometraje; // Kilometraje total de la moto
     private boolean inspeccionRealizada; // Estado de la inspección técnica
 
     // Constructor
-    public Van(double capacidadTanque, String nivelEmisiones, double potenciaMotor, double rendimiento,
-               TipoCombustible tipoCombustible, String placa, String marca, String modelo, double precio,
-               int capacidadPasajeros, double espacioCarga) {
-        super(capacidadTanque, nivelEmisiones, potenciaMotor, rendimiento, tipoCombustible, placa, marca, modelo,
-                precio);
+    public MotoElectrica(double capacidadBateria, double autonomia, double tiempoRecarga, String tipoConector, String placa,
+                String marca, String modelo, double precio, double potenciaMotor, int capacidadPasajeros, double espacioCarga) {
+        super(capacidadBateria, autonomia, tiempoRecarga, tipoConector, placa, marca, modelo, precio, potenciaMotor);
         this.capacidadPasajeros = capacidadPasajeros;
         this.espacioCarga = espacioCarga;
         this.kilometraje = 0.0;
@@ -56,18 +54,19 @@ public class Van extends CombustibleAGas {
     @Override
     public void mostrarCaracteristicas() {
         System.out.println("=================================");
-        System.out.println("      Características de la Van");
+        System.out.println("   Características de la Moto Eléctrica");
         System.out.println("=================================");
         System.out.println("Placa: " + getPlaca());
         System.out.println("Marca: " + getMarca());
         System.out.println("Modelo: " + getModelo());
         System.out.println("Precio: $" + getPrecio());
-        System.out.println("Capacidad del Tanque: " + getCapacidadTanque() + " litros");
-        System.out.println("Nivel de Emisiones: " + getNivelEmisiones());
-        System.out.println("Potencia del Motor: " + getPotenciaMotor() + " HP");
-        System.out.println("Rendimiento: " + getRendimiento() + " km/l");
+        System.out.println("Capacidad de Batería: " + getCapacidadBateria() + " kWh");
+        System.out.println("Autonomía: " + getAutonomia() + " km");
+        System.out.println("Tiempo de Recarga: " + getTiempoRecarga() + " horas");
+        System.out.println("Tipo de Conector: " + getTipoConector());
+        System.out.println("Potencia del Motor: " + getPotenciaMotor() + " kW");
         System.out.println("Capacidad de Pasajeros: " + capacidadPasajeros);
-        System.out.println("Espacio de Carga: " + espacioCarga + " m³");
+        System.out.println("Espacio de Carga: " + espacioCarga + " litros");
         System.out.println("Kilometraje: " + kilometraje + " km");
         System.out.println("Inspección Realizada: " + (inspeccionRealizada ? "Sí" : "No"));
         System.out.println("=================================");
@@ -76,9 +75,9 @@ public class Van extends CombustibleAGas {
     public void realizarInspeccion() {
         if (!inspeccionRealizada) {
             inspeccionRealizada = true;
-            System.out.println("Inspección realizada para la Van con placa " + getPlaca());
+            System.out.println("Inspección realizada para la Moto Eléctrica con placa " + getPlaca());
         } else {
-            System.out.println("La Van con placa " + getPlaca() + " ya tiene una inspección realizada.");
+            System.out.println("La Moto Eléctrica con placa " + getPlaca() + " ya tiene una inspección realizada.");
         }
     }
 

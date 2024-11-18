@@ -1,23 +1,49 @@
 package co.edu.uniquindio.poo;
 
 public abstract class Vehiculo {
-    protected String marca;
-    protected String modelo;
-    protected String tipoCombustible;
-    protected String transmision;
-    protected boolean estado; // nuevo o usado
+    private String placa;
+    private String marca;
+    private String modelo;
+    private double precio;
 
-    public Vehiculo(String marca, String modelo, String tipoCombustible, String transmision, boolean estado) {
+    public Vehiculo(String placa, String marca, String modelo, double precio) {
+        this.placa = placa;
         this.marca = marca;
         this.modelo = modelo;
-        this.tipoCombustible = tipoCombustible;
-        this.transmision = transmision;
-        this.estado = estado;
+        this.precio = precio;
+    }
+
+    public abstract void mostrarCaracteristicas();
+
+    public String getPlaca() {
+        return placa;
+    }
+
+    public void setPlaca(String placa) {
+        this.placa = placa;
     }
 
     public String getMarca() {
         return marca;
     }
 
-    public abstract void mostrarCaracteristicas();
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
 }

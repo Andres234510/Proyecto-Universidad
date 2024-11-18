@@ -1,43 +1,13 @@
 package co.edu.uniquindio.poo;
 
-public class Camion extends Vehiculo {
-    private double capacidadCarga;
-    private boolean frenosAire;
-    private int numEjes;
+public class Camion extends Hibrido {
 
-    public Camion(String marca, String modelo, String tipoCombustible, String transmision, boolean estado, double capacidadCarga, boolean frenosAire, int numEjes) {
-        super(marca, modelo, tipoCombustible, transmision, estado);
-        this.capacidadCarga = capacidadCarga;
-        this.frenosAire = frenosAire;
-        this.numEjes = numEjes;
+    public Camion(String placa, String marca, String modelo, double precio, double capacidadTanque, double autonomiaBateria) {
+        super(placa, marca, modelo, precio, capacidadTanque, autonomiaBateria);
     }
 
     @Override
     public void mostrarCaracteristicas() {
-        System.out.println("Camion: " + marca + " " + modelo + " - Capacidad de Carga: " + capacidadCarga + " kg, Ejes: " + numEjes + ", Frenos de Aire: " + (frenosAire ? "Sí" : "No"));
-    }
-
-    public double getCapacidadCarga() {
-        return capacidadCarga;
-    }
-
-    public void setCapacidadCarga(double capacidadCarga) {
-        this.capacidadCarga = capacidadCarga;
-    }
-
-    public boolean isFrenosAire() {
-        return frenosAire;
-    }
-
-    public void setFrenosAire(boolean frenosAire) {
-        this.frenosAire = frenosAire;
-    }
-
-    public int getNumEjes() {
-        return numEjes;
-    }
-
-    public void setNumEjes(int numEjes) {
-        this.numEjes = numEjes;
+        System.out.println("Camión Híbrido: " + getMarca() + " - Modelo: " + getModelo() + " - Capacidad del Tanque: " + getCapacidadTanque() + " - Autonomía: " + getAutonomiaBateria());
     }
 }
